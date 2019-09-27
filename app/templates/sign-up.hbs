@@ -5,35 +5,19 @@
         </b>
     </p>
     <div class="sign-up">
-        <br>
-        <br>
-        <form>
-            <table>
-                <tr>
-                    <td>
-                        <input type="text" name="userName" value="User Name">
-                    </td>
-                    <td>
-                        <input type="text" name="firstName" value="First Name">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="email" value="Email">
-                    </td>
-                    <td>
-                        <input type="text" name="lastName" value="Last Name">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="password" name="password" value="Password">
-                    </td>
-                </tr>
-            </table>
-            <textarea name="bio">Bio</textarea>
-            <br>
-            <input type="submit">
-        </form>
+        <BsForm @formLayout="vertical" as |form|>
+            <form.element @controlType="text" @label="First Name" @placeholder="First Name" @property="firstName" />
+            <form.element @controlType="text" @label="Last Name" @placeholder="Last Name" @property="lastName" />
+            <form.element @controlType="email" @label="Email address "@placeholder="Email" @property="Email" />
+            <form.element @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
+            <form.element @controlType="text" @label="Icon" @placeholder ="Provide a url to an image" @property="icon" />
+<form.element @controlType="textarea" @label="Bio" @placeholder="Type in me!"  @property="Bio" as |el|>
+  <el.control
+    cols="50"
+    rows="10"
+  />
+</form.element>
+            <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+        </BsForm>
     </div>
 </div>

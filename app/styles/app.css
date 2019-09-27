@@ -1,6 +1,6 @@
 .sidebar {
-    background-color: gray;
-    width: 30vh;
+    background-color: lightgray;
+    width: 15vw;
     height: 90vh;
     position: fixed;
     border-radius: 15px;
@@ -19,26 +19,32 @@
     height: 150px;
 }
 .page {
-    background-color: gray;
+    background-color: lightgray;
     border-radius: 15px;
     float: right;
-    width: 150vh;
+    position: relative;
+    left: -10vw;
+    width: 70vw;
     height: 90vh;
-    margin-right: 60px;
-    margin-left: 0px;
+    overflow-y: scroll;
 }
 
 .title {
     padding-top: 5px;
     padding-left: 15px;
+    font-size: 26pt;
 
 }
 .sign-up {
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 form {
     text-align: center;
     display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 table {
     border-collapse: separate;
