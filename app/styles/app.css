@@ -2,6 +2,7 @@
     background-color: gray;
     width: 30vh;
     height: 90vh;
+    position: fixed;
     border-radius: 15px;
     color: white;
     font-size: 24pt;
@@ -16,4 +17,30 @@
 .logo {
     width: 150px;
     height: 150px;
+}
+.page {
+    background-color: gray;
+    border-radius: 15px;
+    float: right;
+    width: 150vh;
+    height: 90vh;
+    margin-right: 60px;
+    margin-left: 0px;
+}
+
+.title {
+    padding-top: 5px;
+    padding-left: 15px;
+
+}
+.sign-up {
+    text-align: center;
+}
+form {
+    text-align: center;
+    display: inline-block;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 15px 50px;
 }
