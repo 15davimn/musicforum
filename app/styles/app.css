@@ -7,6 +7,7 @@
     color: white;
     font-size: 24pt;
     line-height: 4vh;
+	margin: 20px;
 }
 
 .links {
@@ -27,6 +28,7 @@
     width: 70vw;
     height: 90vh;
     overflow-y: scroll;
+	margin: 20px;
 }
 
 .title {
@@ -49,4 +51,16 @@ form {
 table {
     border-collapse: separate;
     border-spacing: 15px 50px;
+}
+.create-button {
+	display: inline-block;
+    margin: 5px;
+    border-radius: 60px;    
+    background-color: #007bff;
+    color: white;
+    font-size: 60px;
+    padding: 20px 20px; 
+	text-align: center;
+	vertical-align: middle;
+	height: 80px;
 }
