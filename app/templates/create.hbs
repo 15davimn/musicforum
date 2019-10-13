@@ -1,0 +1,15 @@
+<div class="page">
+    <p class="title">
+        <b>
+            Create Post
+        </b>
+    </p>
+    <div class="sign-up">
+        <BsForm @formLayout="vertical" as |form|>
+			<form.element @controlType="textarea" @label="Create Post" @placeholder="Type post body here!"  @property="Bio" as |el|>
+				<el.control cols="80" rows="20"/>
+			</form.element>
+        <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+        </BsForm>
+    </div>
+</div>
