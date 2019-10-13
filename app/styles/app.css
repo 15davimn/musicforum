@@ -1,0 +1,52 @@
+.sidebar {
+    background-color: lightgray;
+    width: 15vw;
+    height: 90vh;
+    position: fixed;
+    border-radius: 15px;
+    color: white;
+    font-size: 24pt;
+    line-height: 4vh;
+}
+
+.links {
+    text-align:center;
+    height: 300px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+.page {
+    background-color: lightgray;
+    border-radius: 15px;
+    float: right;
+    position: relative;
+    left: -10vw;
+    width: 70vw;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.title {
+    padding-top: 5px;
+    padding-left: 15px;
+    font-size: 26pt;
+
+}
+.sign-up {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+form {
+    text-align: center;
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 15px 50px;
+}
