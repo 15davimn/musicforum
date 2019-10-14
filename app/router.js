@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('sign-up');
   this.route('create');
   this.route('list');
+  this.route('thread');
 });
 
 export default Router;

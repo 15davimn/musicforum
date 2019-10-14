@@ -1,1 +1,11 @@
-test
+<div class="threadOverview">
+    <span class="threadTitle">
+        {{#link-to "thread"}}
+        {{model.id}}
+        {{/link-to}}
+        - {{model.owner}}
+    </span>
+    <span class="postCount">
+        {{model.posts}}
+    </span>
+</div>

@@ -1,3 +1,14 @@
+.threadOverview {
+    border-radius: 30px;
+    padding: 10px;
+    background-color: cornsilk;
+}
+
+.postCount {
+    text-align: right;
+    float: right;
+}
+
 .sidebar {
     background-color: lightgray;
     width: 15vw;
