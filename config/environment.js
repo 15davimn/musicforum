@@ -48,5 +48,6 @@ module.exports = function(environment) {
       enabled: true
     };
   }
+
   return ENV;
 };
