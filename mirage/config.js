@@ -54,6 +54,19 @@ export default function () {
     };
   });
 
+  this.get('/threads/songs', function () {
+    return {
+      data: {
+        type: 'threads',
+        id: 'songs',
+        attributes: {
+          owner: 'admin',
+          posts: 21
+        }
+      }
+    };
+  });
+
   this.get('/posts', function() {
     return {
       data: [{
@@ -63,6 +76,51 @@ export default function () {
           thread: 'songs',
           postnumber: 1,
           content: 'I think the Avengers theme is one of the best soundtrack pieces of all time.',
+          user: 'marvelfan'
+        }
+      },
+      {
+        type: 'posts',
+        id: 2,
+        attributes: {
+          thread: 'songs',
+          postnumber: 2,
+          content: 'Wait, no, the Thor theme!',
+          user: 'marvelfan'
+        }
+      },
+      {
+        type: 'posts',
+        id: 3,
+        attributes: {
+          thread: 'lyrics',
+          postnumber: 1,
+          content: 'I wish I could write.',
+          user: 'marvelfan'
+        }
+      }]
+    };
+  });
+
+  this.get('/api/posts?thread=songs', function() {
+    return {
+      data: [{
+        type: 'posts',
+        id: 1,
+        attributes: {
+          thread: 'songs',
+          postnumber: 1,
+          content: 'I think the Avengers theme is one of the best soundtrack pieces of all time.',
+          user: 'marvelfan'
+        }
+      },
+      {
+        type: 'posts',
+        id: 2,
+        attributes: {
+          thread: 'songs',
+          postnumber: 2,
+          content: 'Wait, no, the Thor theme!',
           user: 'marvelfan'
         }
       }]

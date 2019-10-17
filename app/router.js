@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('create');
   this.route('list');
   this.route('thread');
-  this.route('post');
+  this.route('post', { path: 'thread/:thread_id'});
 });
 
 export default Router;

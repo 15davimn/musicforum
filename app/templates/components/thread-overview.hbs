@@ -1,8 +1,8 @@
 <div class="threadOverview">
     <span class="threadTitle">
-        {{#link-to "thread"}}
+        <LinkTo @route="post" @model={{model}}>
         {{model.id}}
-        {{/link-to}}
+        </LinkTo>
         - {{model.owner}}
     </span>
     <span class="postCount">
