@@ -1,3 +1,14 @@
+.threadOverview {
+    border-radius: 30px;
+    padding: 10px;
+    background-color: cornsilk;
+}
+
+.postCount {
+    text-align: right;
+    float: right;
+}
+
 .sidebar {
     background-color: lightgray;
     width: 15vw;
@@ -29,6 +40,42 @@
     height: 90vh;
     overflow-y: scroll;
 	margin: 20px;
+}
+
+.post {
+    background-color: lightgray;
+    border-radius: 15px;
+    float: right;
+    position: relative;
+    left: -10vw;
+    width: 70vw;
+    overflow-y: scroll;
+    margin: 20px;
+    text-align: center;
+}
+
+.add {
+    right: 70vw;
+    position: absolute;
+}
+
+.user {
+    position: relative;
+    float: left;
+    width: 150px;
+    padding-left:10px;
+}
+
+.usericon {
+    width: 70px;
+    height: 70px
+}
+
+.content{
+    position: relative;
+    float: right;
+    padding-right:10px;
+    margin: 0 auto;
 }
 
 .title {

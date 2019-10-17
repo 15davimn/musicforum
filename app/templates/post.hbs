@@ -1,0 +1,5 @@
+{{outlet}}
+<a href="/create/" class="add">Add a post</a>
+{{#each this.model as |post|}}
+<SpecificPost @model={{post}}/>
+{{/each}}
