@@ -50,11 +50,13 @@
     left: -10vw;
     width: 70vw;
     overflow-y: scroll;
-	margin: 20px;
+    margin: 20px;
+    text-align: center;
 }
 
 .add {
-    right: 30vw;
+    right: 70vw;
+    position: absolute;
 }
 
 .user {
@@ -73,6 +75,7 @@
     position: relative;
     float: right;
     padding-right:10px;
+    margin: 0 auto;
 }
 
 .title {
