@@ -6,16 +6,17 @@
     </p>
     <div class="sign-up">
         <BsForm @formLayout="vertical" as |form|>
-            <form.element @controlType="text" @label="First Name" @placeholder="First Name" @property="firstName" />
-            <form.element @controlType="text" @label="Last Name" @placeholder="Last Name" @property="lastName" />
-            <form.element @controlType="email" @label="Email address "@placeholder="Email" @property="Email" />
-            <form.element @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
-            <form.element @controlType="text" @label="Icon" @placeholder ="Provide a url to an image" @property="icon" />
-<form.element @controlType="textarea" @label="Bio" @placeholder="Type in me!"  @property="Bio" as |el|>
-  <el.control
-    cols="50"
-    rows="10"
-  />
+            <span class="row">
+			<form.element class="col-md-6" @controlType="text" @label="First Name" @placeholder="First Name" @property="firstName" />
+            <form.element class="col-md-6" @controlType="text" @label="Last Name" @placeholder="Last Name" @property="lastName" />
+            </span>
+			<span class="row">
+			<form.element class="col-md-6" @controlType="email" @label="Email address "@placeholder="Email" @property="Email" />
+            <form.element class="col-md-6" @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
+            </span>
+			<form.element @controlType="text" @label="Icon" @placeholder ="Provide a url to an image" @property="icon" />
+<form.element @controlType="textarea" @label="Bio" @placeholder="Type in me!" @property="Bio" as |el|>
+  <el.control id="mytextarea" cols="50" rows="5" />
 </form.element>
             <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
         </BsForm>
