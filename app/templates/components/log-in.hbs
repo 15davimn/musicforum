@@ -1,0 +1,14 @@
+<div class="page">
+    <p class="title">
+        <b>
+            Login
+        </b>
+    </p>
+    <div class="sign-up">
+        <BsForm @formLayout="horizontal" @model={{this}} as |form|>
+            <form.element @controlType="string" @label="Username" @placeholder="Username" @property="username" />
+            <form.element @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
+            <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" {{action "submit"}} />
+        </BsForm>
+    </div>
+</div>
