@@ -15,6 +15,7 @@ export default Component.extend({
                     console.log("logged in!")
                     const currentuser = this.get('currentuser');
                     currentuser.setUser(user);
+                    document.getElementById('display-user').innerHTML = this.get('currentuser');
                     console.log(currentuser.get('user').id);
                 } else { 
                     console.log("Could not log in.");
