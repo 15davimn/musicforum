@@ -16,7 +16,9 @@
 body {
 	font-family: 'Odin', sans-serif;
 	margin: 30px;
-	background-image: url("/images/notes.jpg");
+	--background-image: url("/images/notes.jpg");
+	background-color: #111144;
+	--background-image: radial-gradient(#000144, #111111);
 }
 
 a:hover {
