@@ -35,7 +35,7 @@ a:hover {
     height: 90vh;
     position: fixed;
     border-radius: 15px;
-    color: white;
+    color: black;
     font-size: 24pt;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -43,8 +43,7 @@ a:hover {
 }
 
 .links {
-    --text-align:center;
-    --height: 300px;
+    height: 300px;
 }
 
 .logo {

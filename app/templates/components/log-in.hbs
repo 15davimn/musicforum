@@ -5,6 +5,7 @@
         </b>
     </p>
     <div class="sign-up">
+		<span style="font-weight: bold; color: green;">STATUS:</span> {{loginStatus}}<br><br>
         <BsForm @formLayout="horizontal" @model={{this}} as |form|>
             <form.element @controlType="string" @label="Username" @placeholder="Username" @property="username" />
             <form.element @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
