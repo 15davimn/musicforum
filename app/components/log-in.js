@@ -5,7 +5,8 @@ export default Component.extend({
 
     store: service(),
     currentuser: service(),
-
+	loginStatus: 'LOGGED OUT',
+	
     actions: {
         submit() {
             const store = this.get('store');
@@ -16,6 +17,8 @@ export default Component.extend({
                     const currentuser = this.get('currentuser');
                     currentuser.setUser(user);
                     console.log(currentuser.get('user').id);
+					this.set('loginStatus', 'LOGGING IN.....');
+					setTimeout(function(){window.location.replace('create')}, 1500);
                 } else { 
                     console.log("Could not log in.");
                 }
