@@ -4,14 +4,18 @@
     <div class="links">
         <a href="/">&#9632; Home</a>
 		<br>
-        <a href="/login">&#9632; Login</a>
-        <br>
-        <a href="/sign-up">&#9632; Register</a>
-        <br>
-        <br>
-
-
-		<span class="create-button"><a href="/create" class="create-button-text" title="Create Post">+</a></span>
+        {{#if user}}
+        <a href="/" {{action "logout"}}>&#9632; Logout</a>
+            <br>
+            <br>
+            <br>
+            <span class="create-button"><a href="/create" class="create-button-text" title="Create Post">+</a></span>
+            {{loggedInMessage}}
+        {{else}}
+            <a href="/login">&#9632; Login</a>
+            <br>
+            <a href="/sign-up">&#9632; Register</a>
+        {{/if}}
     </div>
 </div>
 {{outlet}}
