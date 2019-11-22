@@ -3,5 +3,4 @@ const { Model } = DS;
 
 export default Model.extend({
     owner: DS.attr(),
-    posts: DS.attr('number')
 });

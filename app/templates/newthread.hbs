@@ -1,0 +1,15 @@
+<div class="page">
+    <p class="title">
+        <b>
+            Create Thread
+        </b>
+    </p>
+    <div class="sign-up">
+        <BsForm @formLayout="vertical" @model={{this}} as |form|>
+			<form.element @controlType="textarea" @label="Create Thread" @placeholder="Type thead name here!"  @property="id" as |el|>
+				<el.control cols="20" rows="1"/ id="mytextarea" />
+			</form.element>
+        <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" {{action "submit"}} />
+        </BsForm>
+    </div>
+</div>
