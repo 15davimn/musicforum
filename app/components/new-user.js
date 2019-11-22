@@ -4,11 +4,9 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
     
     store: service(),
-    currentuser: service(),
 
     actions: {
         submit() {
-            const currentuser = this.get('currentuser');
             const store = this.get('store');
             const user = store.createRecord('user', {
                 id: this.get('username'),
@@ -17,9 +15,8 @@ export default Component.extend({
                 tag: this.get('tag')
             });
             user.save();
-            currentuser.setUser(user);
-            console.log(currentuser.user)
-            //setTimeout(function(){window.location.replace('/')}, 0);
+          localStorage.setItem('user', this.get('username'))
+            window.location.replace('/');
         }
     }
 });
