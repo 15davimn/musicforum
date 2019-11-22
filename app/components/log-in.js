@@ -5,26 +5,27 @@ export default Component.extend({
 
     store: service(),
     currentuser: service(),
-	loginStatus: 'LOGGED OUT',
+	loginStatus: 'LOGGED OUT (Beware! Passwords not secured yet)',
 	
     actions: {
         submit() {
+            this.set('loginStatus', 'LOGGING IN.....');
             const store = this.get('store');
             try {
             store.find('user', this.get('username')).then(user => {
                 if (user.password == this.get('password')) {
-                    console.log("logged in!")
                     const currentuser = this.get('currentuser');
                     currentuser.setUser(user);
-                    console.log(currentuser.get('user').id);
-					this.set('loginStatus', 'LOGGING IN.....');
-					setTimeout(function(){window.location.replace('create')}, 1500);
+                    this.set('loginStatus', 'LOGGED IN!');
+                    localStorage.setItem('user', user.id);
+					setTimeout(function(){window.location.replace('/')}, 1500);
                 } else { 
-                    console.log("Could not log in.");
+                    this.set('loginStatus',"Could not log in.");
                 }
-            });
+            }).catch(error => {
+                this.set('loginStatus',"Could not log in.");
+            })
             } catch(e) {
-                console.log("User not found!");
             }
         }
     }

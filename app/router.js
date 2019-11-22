@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('thread');
   this.route('post', { path: 'thread/:thread_id'});
   this.route('login');
+  this.route('newthread');
 });
 
 export default Router;

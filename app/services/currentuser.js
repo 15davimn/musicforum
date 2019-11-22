@@ -6,6 +6,5 @@ export default Service.extend({
 
     setUser(newUser) {
         this.set('user', newUser);
-        console.log(this.get('user'));
     }
 });
