@@ -1,5 +1,6 @@
 <div class="sidebar">
-	<img src="https://pellissippimusicforum.herokuapp.com/images/musicforumlogos-48dd25a027877e4e4a1f284cb140e214.png" style="margin: 10px;"><br>
+	<img src="{{rootURL}}/images/musicforumlogos.png" style="margin: 10px;"><br>
+	
 	<br>
     <div class="links">
         <a href="/">&#9632; Home</a>
@@ -8,14 +9,19 @@
         <a href="/" {{action "logout"}}>&#9632; Logout</a>
             <br>
             <br>
-            <br>
-            <span class="create-button"><a href="/newthread" class="create-button-text" title="Create Post">+</a></span>
-            {{loggedInMessage}}
+			
+            <!--<span class="create-button"><a href="/newthread" class="create-button-text" title="Create Post">+</a></span>-->
+            <span style="text-transform: capitalize;">{{loggedInMessage}}</span>
+			<a href="/create/" class="">
+			<br>
+			<img src="/images/addIcon.gif" onmouseover="src='/images/addIconblack.gif'" onmouseout="src='/images/addIcon.gif'">
+			</a>
         {{else}}
             <a href="/login">&#9632; Login</a>
             <br>
             <a href="/sign-up">&#9632; Register</a>
         {{/if}}
+		
     </div>
 </div>
 {{outlet}}

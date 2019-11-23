@@ -1,7 +1,14 @@
 <div class="page">
-{{outlet}}
-<a href="/create/" class="add">Add a post</a>
-{{#each this.model as |post|}}
-<SpecificPost @model={{post}}/>
-{{/each}}
+  <p class="title">
+
+    Add a Post 
+    <a href="/create/" class="">
+      <img alt="Create a Post" src="/images/addIcon.gif" onmouseover="src='/images/addIconblack.gif'" onmouseout="src='/images/addIcon.gif'" style="width: 30px; height: 30px">
+    </a>
+  </p>
+
+  {{outlet}}
+  {{#each this.model as |post|}}
+    <SpecificPost @model={{post}}/>
+  {{/each}}
 </div>
