@@ -1,11 +1,17 @@
 {{yield}}
 <div class="post">
-    <div class="user">
-        <p><img src={{user.icon}} class="usericon"></p>
-        <p>{{user.id}}</p>
-        {{log}}
-    </div>
-    <div class="content">
-        <p>{{model.content}}</p>
+    <div class="row flex-nowrap">
+		<div class="col-lg-1">
+			<img src="{{user.icon}}" class="usericon">
+			<br>
+			{{user.id}}
+			{{log}}
+		</div>
+
+	
+
+		<div class="col-lg-11">
+			<div class="content">{{model.content}}</div>
+		</div>			
     </div>
 </div>

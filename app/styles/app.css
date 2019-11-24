@@ -65,14 +65,23 @@ a:hover {
 }
 
 .post {
+	/*padding: 10px;
     background-color: white;
     border-radius: 15px;
 	border: 4px solid black;
     float: right;
     position: relative;
-    width: calc(100% - 265px);
+	width: 100%;
     overflow-y: auto;
     text-align: center;
+	font-family: sans-serif;
+	margin: 20px 20px 20px 20px;*/
+	
+	border-radius: 15px;
+	border: 2px solid lightgray;
+    padding: 10px;
+	margin: 0px 20px 20px 20px;
+    background-color: cornsilk;
 	font-family: sans-serif;
 }
 
@@ -83,20 +92,17 @@ a:hover {
 
 .user {
     position: relative;
-    float: left;
-    width: 150px;
-    padding-left:10px;
 }
 
 .usericon {
     width: 70px;
-    height: 70px
+    height: 70px;
+	background-color: white;
 }
 
 .content{
-    position: relative;
-    float: right;
-    padding-right:10px;
+    float: clear;
+	margin-left: 20px;
 }
 
 .title {
