@@ -7,15 +7,15 @@
     <div class="sign-up">
         <BsForm @formLayout="vertical" @model={{this}} as |form|>
             <span class="row">
-			<form.element class="col-md-6" @controlType="text" @label="Username" @placeholder="First Name" @property="username" />
+			<form.element class="col-md-12" @controlType="text" @label="Username" @placeholder="First Name" @property="username" />
 			</span>
 			<span class="row">
-            <form.element class="col-md-6" @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
+            <form.element class="col-md-12" @controlType="password" @label="Password" @placeholder ="Password" @property="password" />
             </span>
 			<form.element @controlType="text" @label="Icon" @placeholder ="Provide a url to an image" @property="icon" />
-<form.element @controlType="textarea" @label="Bio" @placeholder="Type in me!" @property="tag" as |el|>
-  <el.control id="mytextarea" cols="50" rows="2" />
-</form.element>
+			<form.element @controlType="textarea" @label="Bio" @placeholder="Type in me!" @property="tag" as |el|>
+				<el.control id="mytextarea" cols="50" rows="2" />
+			</form.element>
             <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" {{action "submit"}}/>
         </BsForm>
     </div>
