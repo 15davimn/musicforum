@@ -1,8 +1,9 @@
 <div class="page">
   <p class="title">
-
+    <LinkTo @route ="create" @query={{hash thread=this.model.threadId}}>
     Add a Post 
-      <img alt="Create a Post" src="/images/addIcon.gif" onmouseover="src='/images/addIconblack.gif'" onmouseout="src='/images/addIcon.gif'" action={{action "clicked"}}>
+      <img alt="Create a Post" src="/images/addIcon.gif" onmouseover="src='/images/addIconblack.gif'" onmouseout="src='/images/addIcon.gif'">
+      </LinkTo>
   </p>
 
   {{outlet}}

@@ -14,7 +14,7 @@
 				where chord names are surrounded by square brackets [].<br>
 				Then click he NOTATE button to convert it before sumbitting.
 			</form.element>
-        <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+        <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" @onClick={{action "submit"}} />
 		<button class="btn btn-primary ember-view" onClick="notate();">Notate</button>
 
 		</BsForm>
