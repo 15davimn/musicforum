@@ -6,10 +6,28 @@
     </p>
     <div class="sign-up">
         <BsForm @formLayout="vertical" as |form|>
-			<form.element @controlType="textarea" @label="Create New Post Below" @placeholder="Type post body here!"  @property="Bio" as |el|>
-				<el.control cols="80" rows="20"/ id="mytextarea" />
+			<form.element @controlType="textarea" @label="Create New Post Below" @placeholder="Type post body here!"  @property="Post" as |el|>
+				<el.control cols="80" rows="10"/ id="mytextarea" />
+				<br>
+				To write lyrics, use the following format:<br>
+				<b>[C]Mary had a little lamb, [G]little lamb, [C]little lamb.</b><br>
+				where chord names are surrounded by square brackets [].<br>
+				Then click he NOTATE button to convert it before sumbitting.
 			</form.element>
         <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
-        </BsForm>
+		<button class="btn btn-primary ember-view" onClick="notate();">Notate</button>
+
+		</BsForm>
     </div>
 </div>
+
+<script type="text/javascript" src="/scripts/notate.js"></script>
+<script>
+	function fill() {
+		document.getElementById('mytextarea').value = "[C]aaaaaaa [C]aa [C]aaa [C]aaaaaaa [C]aaa";
+	}
+	
+	function notate() {
+		
+	}
+</script>
