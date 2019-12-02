@@ -5,8 +5,8 @@
         </b>
     </p>
     <div class="sign-up">
-        <BsForm @formLayout="vertical" as |form|>
-			<form.element @controlType="textarea" @label="Create New Post Below" @placeholder="Type post body here!"  @property="Post" as |el|>
+        <BsForm @formLayout="vertical" @model={{this}} as |form|>
+			<form.element @controlType="textarea" @label="Create New Post Below" @placeholder="Type post body here!"  @property="post" as |el|>
 				<el.control cols="80" rows="10"/ id="mytextarea" />
 				<br>
 				To write lyrics, use the following format:<br>
@@ -14,7 +14,7 @@
 				where chord names are surrounded by square brackets [].<br>
 				Then click he NOTATE button to convert it before sumbitting.
 			</form.element>
-        <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+        <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" @onClick={{action "submit"}} />
 		<button class="btn btn-primary ember-view" onClick="notate();">Notate</button>
 
 		</BsForm>
