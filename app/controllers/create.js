@@ -23,7 +23,7 @@ export default Controller.extend({
                 user: user
             });
             newPost.save().catch(error => {
-                //window.location.replace('/');
+                window.location.replace('/');
             });
         }
     }
