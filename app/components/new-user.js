@@ -16,7 +16,7 @@ export default Component.extend({
             });
             localStorage.setItem('user', this.get('username'));
             user.save().catch(response => {
-                setTimeout(function(){window.location.replace('/')}, 2000)
+                setTimeout(function(){window.location.replace('/')}, 2000);
             });
         }
     }
