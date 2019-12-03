@@ -16,7 +16,7 @@ export default Component.extend({
             });
             localStorage.setItem('user', this.get('username'));
             user.save().catch(response => {
-                window.location.replace('/');
+                //window.location.replace('/');
             });
         }
     }
