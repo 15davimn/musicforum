@@ -14,9 +14,10 @@ export default Component.extend({
                 icon: this.get('icon'),
                 tag: this.get('tag')
             });
-            user.save();
-          localStorage.setItem('user', this.get('username'))
-            window.location.replace('/');
+            localStorage.setItem('user', this.get('username'));
+            user.save().catch(response => {
+                window.location.replace('/');
+            });
         }
     }
 });
